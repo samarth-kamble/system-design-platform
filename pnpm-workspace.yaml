@@ -7,4 +7,5 @@ allowBuilds:
   sharp: true
   unrs-resolver: true
   msw: false
-  '@parcel/watcher': true
+  "@parcel/watcher": true
+  "@scarf/scarf": false
