@@ -26,7 +26,9 @@ export class AllExceptionsFilter implements ExceptionFilter {
       exception instanceof HttpException ? exception.getResponse() : null;
 
     const message =
-      typeof exceptionResponse === 'object' && exceptionResponse !== null && 'message' in exceptionResponse
+      typeof exceptionResponse === 'object' &&
+      exceptionResponse !== null &&
+      'message' in exceptionResponse
         ? (exceptionResponse as Record<string, unknown>).message
         : exception instanceof Error
           ? exception.message
